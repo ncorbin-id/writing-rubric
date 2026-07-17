@@ -1,0 +1,91 @@
+{
+    "version": 1,
+    "name": "Self-grading rubric",
+    "formElements": [
+        {
+            "type": "richtext-input",
+            "formKey": "prompt",
+            "label": "Writing prompt",
+            "placeholder": "Enter the writing prompt learners will respond to...",
+            "labelPosition": "top",
+            "inputMinHeight": "100px"
+        },
+        {
+            "type": "collection-manager",
+            "formKey": "criteria",
+            "itemSingularLabel": "Criterion",
+            "itemPluralLabel": "Rubric criteria",
+            "itemTitleProperty": "title",
+            "itemEditorFormElements": [
+                {
+                    "type": "richtext-input",
+                    "formKey": "title",
+                    "label": "Criterion name",
+                    "placeholder": "e.g., Situation"
+                },
+                {
+                    "type": "richtext-input",
+                    "formKey": "question",
+                    "label": "Guiding question",
+                    "placeholder": "e.g., Is the context clear?"
+                },
+                {
+                    "type": "collection-manager",
+                    "formKey": "levels",
+                    "itemSingularLabel": "Level",
+                    "itemPluralLabel": "Levels",
+                    "itemTitleProperty": "score",
+                    "itemEditorFormElements": [
+                        {
+                            "type": "number-input",
+                            "formKey": "score",
+                            "label": "Score",
+                            "minValue": 0
+                        },
+                        {
+                            "type": "richtext-input",
+                            "formKey": "description",
+                            "label": "Description"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "richtext-input",
+            "formKey": "conclusion",
+            "label": "Conclusion",
+            "placeholder": "Enter the closing message learners will see after grading themselves...",
+            "labelPosition": "top",
+            "inputMinHeight": "100px"
+        },
+        {
+            "type": "panel",
+            "headerTitle": "Appearance",
+            "expandable": true,
+            "collapsed": true,
+            "formElements": [
+                {
+                    "type": "color-input",
+                    "formKey": "promptBackgroundColor",
+                    "label": "Writing prompt background color",
+                    "isClearColorAvailable": true,
+                    "helperText": "Background color for the writing prompt box."
+                },
+                {
+                    "type": "color-input",
+                    "formKey": "conclusionBackgroundColor",
+                    "label": "Conclusion background color",
+                    "isClearColorAvailable": true,
+                    "helperText": "Background color for the conclusion box."
+                },
+                {
+                    "type": "color-input",
+                    "formKey": "accentColor",
+                    "label": "Accent color",
+                    "helperText": "Used for buttons, progress dots, and selection highlights on the review screens."
+                }
+            ]
+        }
+    ]
+}
